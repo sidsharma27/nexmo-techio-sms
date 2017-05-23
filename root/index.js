@@ -36,3 +36,5 @@ function handleParams(params, res) {
   }
   res.status(200).end();
 }
+
+module.exports = app;
