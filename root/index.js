@@ -24,7 +24,7 @@ function handleParams(params, res) {
   if (!params.to || !params.msisdn) { //doesn't have the to # or from # -> usually hit when verifiying the endpoint (callback)
     console.log('This is not a valid inbound SMS message!');
   } else { //has to & from aka is a text
-    console.log('Incoming Text:\n');
+    console.log('Incoming Text:');
     console.log('---------------------');
     let incomingData = {
       messageId: params.messageId,
