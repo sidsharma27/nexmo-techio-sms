@@ -5,10 +5,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//initialize nexmo client w/ apikey & secret
+//initialize nexmo client w/ your apikey & secret
 const nexmo = new Nexmo({
-  apiKey: "02161ced",
-  apiSecret: "11390ab3"
+  apiKey: "",
+  apiSecret: ""
 });
 
 // Handle both GET and POST requests
@@ -24,7 +24,8 @@ function handleParams(params, res) {
   if (!params.to || !params.msisdn) { //doesn't have the to # or from # -> usually hit when verifiying the endpoint (callback)
     console.log('This is not a valid inbound SMS message!');
   } else { //has to & from aka is a text
-    console.log('Success');
+    console.log('Incoming Text:\n');
+    console.log('---------------------');
     let incomingData = {
       messageId: params.messageId,
       from: params.msisdn,
@@ -32,6 +33,10 @@ function handleParams(params, res) {
       type: params.type,
       timestamp: params['message-timestamp']
     };
+    console.log('Message ID: ' + incomingData.messageId);
+    console.log('Message From: ' + incomingData.from);
+    console.log('Message Text: ' + incomingData.text);
+    console.log('Message Type: ' + incomingData.type);
     res.send(incomingData);
   }
   res.status(200).end();
