@@ -4,3 +4,9 @@ plan:
     statement: markdowns/part1.md
   - title: Part 2
     statement: markdowns/part2.md
+projects:
+  mocha:
+   root: root
+   runner:
+    name: codingame/node-npm-runner
+    version: latest
