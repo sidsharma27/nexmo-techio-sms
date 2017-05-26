@@ -16,6 +16,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mocha": "^3.4.1",
-    "nexmo": "^2.0.2"
+    "nexmo": "^2.0.2",
+    "prettyjson": "1.2.1"
   }
 }
