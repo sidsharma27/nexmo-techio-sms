@@ -10,7 +10,7 @@ const nexmo = new Nexmo({
   apiSecret: ''
 });
 
-app.post('/send/', (req, res) => {
+app.post('/send', (req, res) => {
   // Send SMS
   nexmo.message.sendSms('NEXMO_VIRTUAL_NUMBER', 'DESTINATION_NUMBER', 'Text_Message', (err, responseData) => {
     if (err) {
