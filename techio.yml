@@ -8,5 +8,5 @@ projects:
   mocha:
    root: root
    runner:
-    name: techio/node-npm-runner
-    version: latest
+    name: node
+    version: 7.10.0
