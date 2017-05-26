@@ -1,8 +1,8 @@
-title : Content name
+title : Nexmo Send & Recieve SMS messages
 plan:
-  - title: Part 1
+  - title: Send a SMS
     statement: markdowns/part1.md
-  - title: Part 2
+  - title: Recieve a SMS
     statement: markdowns/part2.md
 projects:
   mocha:
