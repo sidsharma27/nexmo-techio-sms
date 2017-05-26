@@ -1,8 +1,3 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 const Nexmo = require('nexmo');
 
 const nexmo = new Nexmo({
@@ -10,13 +5,10 @@ const nexmo = new Nexmo({
   apiSecret: ''
 });
 
-app.post('/send', (req, res) => {
-  // Send SMS
-  nexmo.message.sendSms('NEXMO_VIRTUAL_NUMBER', 'DESTINATION_NUMBER', 'Text_Message', (err, responseData) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.dir(responseData);
-    }
-  });
+nexmo.message.sendSms('VIRTUALNUMBER', 'TONUMBER', 'TEXT', (err, responseData) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.dir(responseData);
+  }
 });
