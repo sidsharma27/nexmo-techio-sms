@@ -1,0 +1,1 @@
+You can use the Nexmo SMS API to send and receive a high volume of SMS anywhere in the world  You don't need to worry about local regulations as Nexmo takes care of that for you. This is a testing environment for the Nexmo SMS API using NodeJS and Express.

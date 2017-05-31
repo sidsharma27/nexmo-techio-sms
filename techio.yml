@@ -1,5 +1,7 @@
-title : Nexmo Send & Recieve SMS messages
+title : Send & Recieve SMS messages in Node.JS using Nexmo
 plan:
+  - title: Nexmo SMS API
+    statement: intro.md
   - title: Send a SMS
     statement: markdowns/part1.md
   - title: Recieve a SMS
